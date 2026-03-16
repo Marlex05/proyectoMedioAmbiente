@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <nav className="sticky top-6 z-50 mx-auto w-[95%] max-w-[1400px]">
       <div className="rounded-3xl border border-white/30 bg-white/80 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:shadow-secondary/45">
@@ -36,39 +38,33 @@ export default function Navbar() {
                 <div className="rounded-2xl border border-white/40 bg-white/95 p-3 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur-xl">
                   <div className="flex flex-col gap-1 text-[13px] font-semibold tracking-wide text-slate-700">
                     <a
-                      href="/impacto-quimico#contaminantes"
+                      href={`${base}impacto-quimico#contaminantes`}
                       className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Contaminantes químicos
                     </a>
 
                     <a
-                      href="/impacto-quimico#metodos"
+                      href={`${base}impacto-quimico#metodos`}
                       className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Métodos para reducir contaminación
                     </a>
 
                     <a
-                      href="/impacto-quimico#tecnologia"
+                      href={`${base}impacto-quimico#tecnologia`}
                       className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Tecnología para tratar contaminantes
                     </a>
 
                     <a
-                      href="/impacto-quimico#uso-responsable"
+                      href={`${base}impacto-quimico#uso-responsable`}
                       className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Uso responsable en el hogar
                     </a>
-
-                    <a
-                      href="/impacto-quimico#propuestas"
-                      className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
-                    >
-                      Propuestas y acciones
-                    </a>
+                    
                   </div>
                 </div>
               </div>
