@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const base = import.meta.env.BASE_URL;
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToImpactoSection = (sectionId) => {
+    if (location.pathname === "/impacto-quimico") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/impacto-quimico", { state: { scrollTo: sectionId } });
+    }
+  };
 
   return (
     <nav className="sticky top-6 z-50 mx-auto w-[95%] max-w-[1400px]">
@@ -26,7 +38,7 @@ export default function Navbar() {
               <span className="absolute -bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-emerald-500 opacity-0 transition-all group-hover:scale-150 group-hover:opacity-100" />
             </Link>
 
-            <div className="group relative">
+            <div className="group relative py-2">
               <Link
                 to="/impacto-quimico"
                 className="relative transition-colors hover:text-emerald-700"
@@ -37,34 +49,37 @@ export default function Navbar() {
               <div className="pointer-events-none absolute left-1/2 top-full z-[60] w-[340px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
                 <div className="rounded-2xl border border-white/40 bg-white/95 p-3 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur-xl">
                   <div className="flex flex-col gap-1 text-[13px] font-semibold tracking-wide text-slate-700">
-                    <a
-                      href={`${base}impacto-quimico#contaminantes`}
-                      className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
+                    <button
+                      type="button"
+                      onClick={() => goToImpactoSection("contaminantes")}
+                      className="rounded-xl px-3 py-3 text-left transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Contaminantes químicos
-                    </a>
+                    </button>
 
-                    <a
-                      href={`${base}impacto-quimico#metodos`}
-                      className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
+                    <button
+                      type="button"
+                      onClick={() => goToImpactoSection("metodos")}
+                      className="rounded-xl px-3 py-3 text-left transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Métodos para reducir contaminación
-                    </a>
+                    </button>
 
-                    <a
-                      href={`${base}impacto-quimico#tecnologia`}
-                      className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
+                    <button
+                      type="button"
+                      onClick={() => goToImpactoSection("tecnologia")}
+                      className="rounded-xl px-3 py-3 text-left transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Tecnología para tratar contaminantes
-                    </a>
+                    </button>
 
-                    <a
-                      href={`${base}impacto-quimico#uso-responsable`}
-                      className="rounded-xl px-3 py-3 transition-colors hover:bg-slate-100 hover:text-emerald-700"
+                    <button
+                      type="button"
+                      onClick={() => goToImpactoSection("uso-responsable")}
+                      className="rounded-xl px-3 py-3 text-left transition-colors hover:bg-slate-100 hover:text-emerald-700"
                     >
                       Uso responsable en el hogar
-                    </a>
-                    
+                    </button>
                   </div>
                 </div>
               </div>
@@ -77,6 +92,7 @@ export default function Navbar() {
               Propuestas
               <span className="absolute -bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-emerald-500 opacity-0 transition-all group-hover:scale-150 group-hover:opacity-100" />
             </Link>
+
             <Link
               to="/referencias"
               className="group relative transition-colors hover:text-emerald-700"

@@ -4,14 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import ScrollToTop from './components/utils/ScrollToTop.jsx'
 
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename='/proyectoMedioAmbiente'>
+    <HashRouter>
       <ScrollToTop />
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 
 ) 

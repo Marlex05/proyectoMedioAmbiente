@@ -8,24 +8,10 @@ import Propuestas from "./pages/Propuestas";
 export default function App() {
   return (
     <Routes>
-
       <Route path="/" element={<Home />} />
-      
-      <Route
-        path="/impacto-quimico"
-        element={<ImpactoQuimico />}
-      />
-
-      <Route
-        path="/propuestas"
-        element={<Propuestas />}
-      />
-
-      <Route
-        path="/referencias"
-        element={<Referencias />}
-      />
-
+      <Route path="/impacto-quimico" element={<ImpactoQuimico />} />
+      <Route path="/propuestas" element={<Propuestas />} />
+      <Route path="/referencias" element={<Referencias />} />
     </Routes>
   );
 }
