@@ -1,15 +1,15 @@
 import odsLogo from "../../assets/images/ods-logo.png";
-import ods1 from "../../assets/images/ods1.jpg";
-import ods2 from "../../assets/images/ods2.jpg";
 import ods3 from "../../assets/images/ods3.jpg";
 import ods4 from "../../assets/images/ods4.jpg";
+import ods14 from "../../assets/images/ods14.jpg";
+import ods15 from "../../assets/images/ods15.jpg";
 
 export default function ODS() {
     const ods = [
-        { title: "Garantizar la salud y el bienestar", number: "03", description: "Garantizar una vida sana y promover el bienestar para todas las personas, en todas las edades, para el año 2030. Este objetivo reconoce que la salud es un derecho fundamental y una condición indispensable para el desarrollo social y económico de los países.", image: ods1, reverse: false, color: "#E5243B" },
-        { title: "Garantizar una educación de calidad", number: "04", description: "Proporcionar igualdad de acceso a una formación profesional asequible, eliminar las disparidades de género y riqueza y lograr el acceso universal a una educación superior de calidad.", image: ods2, reverse: true, color: "#DDA63A" },
-        { title: "Conservar y usar sosteniblemente los océanos, los mares y los recursos marinos", number: "14", description: " Este objetivo tiene como finalidad proteger los ecosistemas marinos y costeros, ya que los océanos son fundamentales para la vida en el planeta, regulan el clima, producen gran parte del oxígeno que respiramos y son una fuente esencial de alimento y empleo para millones de personas en todo el mundo.", image: ods3, reverse: false, color: "#4C9F38" },
-        { title: "Vida de ecosistemas terrestres", number: "15", description: "Busca proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres. Esto incluye la gestión de los bosques, la lucha contra la desertificación y la detención de la pérdida de biodiversidad. ", image: ods4, reverse: true, color: "#C5192D" },
+        { title: "Garantizar la salud y el bienestar", number: "03", description: "Garantizar una vida sana y promover el bienestar para todas las personas, en todas las edades, para el año 2030. Este objetivo reconoce que la salud es un derecho fundamental y una condición indispensable para el desarrollo social y económico de los países.", image: ods3, reverse: false, color: "#E5243B" },
+        { title: "Garantizar una educación de calidad", number: "04", description: "Proporcionar igualdad de acceso a una formación profesional asequible, eliminar las disparidades de género y riqueza y lograr el acceso universal a una educación superior de calidad.", image: ods4, reverse: true, color: "#DDA63A" },
+        { title: "Conservar y usar sosteniblemente los océanos, los mares y los recursos marinos", number: "14", description: " Este objetivo tiene como finalidad proteger los ecosistemas marinos y costeros, ya que los océanos son fundamentales para la vida en el planeta, regulan el clima, producen gran parte del oxígeno que respiramos y son una fuente esencial de alimento y empleo para millones de personas en todo el mundo.", image: ods14, reverse: false, color: "#4C9F38" },
+        { title: "Vida de ecosistemas terrestres", number: "15", description: "Busca proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres. Esto incluye la gestión de los bosques, la lucha contra la desertificación y la detención de la pérdida de biodiversidad. ", image: ods15, reverse: true, color: "#C5192D" },
     ];
 
     return (
