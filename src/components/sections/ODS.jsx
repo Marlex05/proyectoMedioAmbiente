@@ -1,4 +1,5 @@
 import odsLogo from "../../assets/images/ods-logo.png";
+import pdfODS12 from "../../assets/ods12-infografia.pdf";
 
 const odsImages = import.meta.glob("../../assets/images/ods*.jpg", {
     eager: true,
@@ -141,7 +142,23 @@ export default function ODS() {
 
                                 <p className="mt-4 text-xl leading-relaxed text-slate-600 text-left md:text-justify">
                                     {item.description}
+
+                                    {item.number === "12" && (
+                                        <>
+                                            {" "}
+                                            <a
+                                                href={pdfODS12}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 underline hover:text-blue-800"
+                                            >
+                                                Propuestas de entornos saludables y seguros para personas mayores
+                                            </a>
+                                        </>
+                                    )}
+                                    
                                 </p>
+
                             </div>
                         </article>
                     ))}

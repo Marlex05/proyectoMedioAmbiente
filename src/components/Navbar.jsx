@@ -54,7 +54,7 @@ export default function Navbar() {
                       Técnicas clínicas
                     </button>
                     <button onClick={() => goToSection("/odsTres", "cuidados-ods03")} className={dropdownButtonClass}>
-                      Cuidados
+                      Cuidados del paciente geriátrico
                     </button>
                   </div>
                 </div>
